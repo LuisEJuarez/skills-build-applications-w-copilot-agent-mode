@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose from 'mongoose';
+import { connectDatabase } from './config/database';
 import { User } from './models/user';
 import { Team } from './models/team';
 import { Activity } from './models/activity';
@@ -128,8 +128,7 @@ app.listen(PORT, HOST, async () => {
   console.log(`Backend listening on ${getApiUrl()}`);
 
   try {
-    await mongoose.connect(MONGODB_URI);
-    console.log('Connected to MongoDB at', MONGODB_URI);
+    await connectDatabase();
   } catch (error) {
     console.error('MongoDB connection failed:', error);
   }
