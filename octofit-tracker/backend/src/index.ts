@@ -14,7 +14,7 @@ const CODESPACE_NAME = process.env.CODESPACE_NAME;
 
 const getApiUrl = () => {
   if (CODESPACE_NAME) {
-    return `https://${CODESPACE_NAME}-8000.githubpreview.dev`;
+    return `https://${CODESPACE_NAME}-8000.app.github.dev`;
   }
 
   return `http://localhost:${PORT}`;

@@ -17,7 +17,7 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/octofi
 const CODESPACE_NAME = process.env.CODESPACE_NAME;
 const getApiUrl = () => {
     if (CODESPACE_NAME) {
-        return `https://${CODESPACE_NAME}-8000.githubpreview.dev`;
+        return `https://${CODESPACE_NAME}-8000.app.github.dev`;
     }
     return `http://localhost:${PORT}`;
 };
