@@ -1,1 +1,4 @@
-export { default } from './Activities.tsx';
+import ActivitiesComponent from './Activities.tsx';
+
+export const API_PATH = '/api/activities/';
+export default ActivitiesComponent;
