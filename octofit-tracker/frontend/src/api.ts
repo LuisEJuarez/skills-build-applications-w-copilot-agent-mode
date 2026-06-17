@@ -4,7 +4,7 @@ export const apiHost = codespaceName
   ? `https://${codespaceName}-8000.app.github.dev`
   : 'http://localhost:8000';
 
-export const getApiUrl = (endpoint: string) => `${apiHost}/api/${endpoint}`;
+export const getApiUrl = (endpoint: string) => `${apiHost}/api/${endpoint}/`;
 
 export const normalizeCollection = <T>(payload: unknown, keys: string[] = []): T[] => {
   if (Array.isArray(payload)) {
