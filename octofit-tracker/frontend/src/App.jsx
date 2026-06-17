@@ -1,12 +1,12 @@
 import { BrowserRouter, NavLink, Navigate, Route, Routes } from 'react-router-dom';
-import Activities from './components/Activities';
-import Leaderboard from './components/Leaderboard';
-import Teams from './components/Teams';
-import Users from './components/Users';
-import Workouts from './components/Workouts';
-import { apiHost, codespaceName } from './api';
+import Activities from './components/Activities.jsx';
+import Leaderboard from './components/Leaderboard.jsx';
+import Teams from './components/Teams.jsx';
+import Users from './components/Users.jsx';
+import Workouts from './components/Workouts.jsx';
+import { apiHost, codespaceName } from './api.js';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="container py-4">
@@ -66,6 +66,6 @@ function App() {
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
